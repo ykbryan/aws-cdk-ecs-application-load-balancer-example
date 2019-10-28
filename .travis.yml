@@ -1,0 +1,14 @@
+language: node_js
+sudo: false
+git:
+  depth: 1
+node_js:
+  - 12
+install:
+  - npm install
+script:
+  - echo $TRAVIS_PULL_REQUEST
+  - echo $TRAVIS_BRANCH
+  - npm test
+after_success:
+  - echo DONE
