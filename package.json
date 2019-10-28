@@ -8,7 +8,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
     "@aws-cdk/assert": "^1.6.1",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@aws-cdk/aws-ecs": "^1.15.0",
     "@aws-cdk/aws-ecs-patterns": "^1.15.0",
-    "@aws-cdk/core": "^1.15.0"
+    "@aws-cdk/core": "^1.15.0",
+    "coveralls": "^3.0.7"
   }
 }

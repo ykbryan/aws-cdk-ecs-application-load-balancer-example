@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/ykbryan/aws-cdk-ecs-application-load-balancer-example.svg?branch=master)](https://travis-ci.org/ykbryan/aws-cdk-ecs-application-load-balancer-example)
-
-[![Coverage Status](https://coveralls.io/repos/github/ykbryan/aws-cdk-ecs-application-load-balancer-example/badge.svg?branch=master)](https://coveralls.io/github/ykbryan/aws-cdk-ecs-application-load-balancer-example?branch=master)
+[![Build Status](https://travis-ci.org/ykbryan/aws-cdk-ecs-application-load-balancer-example.svg?branch=master)](https://travis-ci.org/ykbryan/aws-cdk-ecs-application-load-balancer-example) [![Coverage Status](https://coveralls.io/repos/github/ykbryan/aws-cdk-ecs-application-load-balancer-example/badge.svg?branch=master)](https://coveralls.io/github/ykbryan/aws-cdk-ecs-application-load-balancer-example?branch=master)
 
 # Useful commands
 
