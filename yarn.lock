@@ -113,7 +113,7 @@
     "@aws-cdk/aws-s3" "1.15.0"
     "@aws-cdk/core" "1.15.0"
 
-"@aws-cdk/aws-cloudwatch@1.15.0":
+"@aws-cdk/aws-cloudwatch@1.15.0", "@aws-cdk/aws-cloudwatch@^1.15.0":
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cloudwatch/-/aws-cloudwatch-1.15.0.tgz#d4d0cd81ad283c9c13f11b71065f1ae3a3298293"
   integrity sha512-bYGCVP6479dnUOOJxxDzVzc6uzyNIHxsbF8zormEJeP0oLS/IF8+cReOM9nPhBdeAsAYgKkusRY+dRleC+tEbw==
