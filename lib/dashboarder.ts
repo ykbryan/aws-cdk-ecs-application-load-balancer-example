@@ -68,12 +68,18 @@ export class Dashboarder extends Construct {
     ecsCluster: ecs.Cluster,
     metric: MetricMe
   ): cloudwatch.GraphWidget {
-    let metricOptions = {};
-    let graphOptions = {};
+    let metricOptions, graphOptions, graphMetric;
     switch (metric.metricName) {
       case 'CPUUtilization':
+      case 'MemoryUtilization':
         metricOptions = {
           statistic: 'max' //by default, this is avg
+        };
+        graphOptions = {
+          leftYAxis: {
+            max: 100,
+            min: 0
+          }
         };
         break;
       case 'TargetResponseTime':
@@ -85,7 +91,6 @@ export class Dashboarder extends Construct {
         break;
     }
 
-    let graphMetric;
     switch (metric.serviceName) {
       case 'ALB':
         graphMetric = this.prepareAlbMetricForEcsPatternsALBFargateService(
@@ -102,13 +107,6 @@ export class Dashboarder extends Construct {
           metric.metricName,
           metricOptions
         );
-
-        graphOptions = {
-          leftYAxis: {
-            max: 100,
-            min: 0
-          }
-        };
         break;
     }
 
@@ -138,6 +136,7 @@ export class Dashboarder extends Construct {
       ...options
     });
   }
+
   private prepareAlbMetricForEcsPatternsALBFargateService(
     fargateService: ecs_patterns.ApplicationLoadBalancedFargateService,
     metricName: string,
