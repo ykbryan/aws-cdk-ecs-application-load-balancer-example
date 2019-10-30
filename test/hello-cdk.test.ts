@@ -27,3 +27,11 @@ test('Load Balancer Created', () => {
     haveResource('AWS::ElasticLoadBalancingV2::LoadBalancer')
   );
 });
+
+test('CloudWatch Dashboard Created', () => {
+  const app = new cdk.App();
+  // WHEN
+  const stack = new HelloCdk.HelloCdkStack(app, 'MyTestStack');
+  // THEN
+  expectCDK(stack).to(haveResource('AWS::CloudWatch::Dashboard'));
+});
